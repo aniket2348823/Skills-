@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Product Enhancer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Product<span class="gradient-text">Enhancer</span>.ai</h1>
+            <p>Transform your product photos into e-commerce masterpieces.</p>
+        </header>
+
+        <section class="upload-section" id="upload-section">
+            <div class="drop-zone" id="drop-zone">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <h3>Drop your product image here</h3>
+                <p>or <span class="browse-btn">browse files</span></p>
+                <input type="file" id="file-input" accept="image/*" hidden>
+            </div>
+        </section>
+
+        <section class="preview-section hidden" id="preview-section">
+            <div class="comparison-container">
+                <div class="image-card original">
+                    <span class="badge">Original</span>
+                    <img id="original-image" src="" alt="Original">
+                </div>
+                <div class="image-card enhanced">
+                    <span class="badge gradient-badge">AI Enhanced</span>
+                    <div class="loader-overlay" id="loader">
+                        <div class="spinner"></div>
+                        <p>Enhancing...</p>
+                    </div>
+                    <img id="enhanced-image" src="" alt="Enhanced">
+                </div>
+            </div>
+
+            <div class="result-details hidden" id="result-details">
+                <div class="detail-group">
+                    <label>Generated Title</label>
+                    <div class="copy-box">
+                        <p id="generated-title">...</p>
+                        <button id="copy-btn" title="Copy to clipboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <button id="reset-btn" class="secondary-btn">Enhance Another</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

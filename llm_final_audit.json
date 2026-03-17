@@ -1,0 +1,21 @@
+{
+    "pings": {
+        "qwen2.5:0.5b": {
+            "status": "ONLINE",
+            "ping": 9.264867305755615
+        },
+        "qwen2.5-coder:0.5b": {
+            "status": "ONLINE",
+            "ping": 9.123138189315796
+        },
+        "qwen3.5:0.8b": {
+            "status": "ONLINE",
+            "ping": 43.759602308273315
+        }
+    },
+    "quality_3_5": {
+        "status": "OK",
+        "latency": 86.59678316116333,
+        "content": "```python\ndef is_palindrome(s: str) -> bool:\n    return s == s[::-1]\n```"
+    }
+}

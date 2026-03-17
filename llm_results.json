@@ -1,0 +1,12 @@
+[
+    {
+        "model": "qwen2.5-coder:0.5b",
+        "status": "ONLINE",
+        "latency": 32.406054735183716,
+        "content": "Reflection XSS and stored XSS are both types of XSS, but they operate on the same concept but have different mechanisms and can lead to different types of attacks. Reflection XSS involves injecting code directly into a web application, while stored XSS involves storing the code in a database and allowing it to be executed on the server.\n\nHere's a simple payload for each type of XSS:\n\n### Reflection XSS\n\n**Payload:**\n```html\n<script>alert('I am an attacker');</script>\n```\n\n**Explanation:**\nIn this payload, the JavaScript code inside the `<script>` tag is injected directly into the web application's DOM. This can be useful for malicious purposes, such as stealing user input or injecting malicious code directly into the codebase. The attacker can then execute this code, potentially leading to unauthorized access to the application's data or causing damage to the application.\n\n### Stored XSS\n\n**Payload:**\n```html\n<script>alert('I am an attacker');</script>\n```\n\n**Explanation:**\nIn this payload, the JavaScript code inside the `<script>` tag is stored in a database. The attacker can then retrieve and execute this code on the server. This can be useful for malicious purposes, such as stealing user input or injecting malicious code directly into the codebase. The attacker can then execute this code, potentially leading to unauthorized access to the application's data or causing damage to the application.\n\nBoth payloads can be used to execute malicious code. However, stored XSS is generally more secure as it is stored in a database and does not contain any user input, which can be exploited by attackers."
+    },
+    {
+        "model": "qwen3.5:0.8b",
+        "status": "ERROR"
+    }
+]
